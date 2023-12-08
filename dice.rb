@@ -35,3 +35,13 @@ get("/dice/2/10") do
    <p>#{outcome}</p>"
 
 end
+
+get("dice/1/20") do
+  first_die = rand(1..20)
+
+  outcome = "there was only one die and it reads #{first_die}"
+
+  "<h1>1d20</h1>
+   <p>#{outcome}</p>"
+end
+
