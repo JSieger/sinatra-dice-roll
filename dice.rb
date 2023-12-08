@@ -2,7 +2,11 @@ require "sinatra"
 require "sinatra/reloader"
 
 get '/' do
-  "Hello World"
+  "<h1>Dice Roll</h1>
+  <a href=/dice/2/6>2d6</a>
+  <a href=/dice/2/10>2d10</a>
+  <a href=/dice/1/20>1d20</a>
+  <a href=/dice/5/4>5d4</a>"
 end
 
 get("/zebra") do
