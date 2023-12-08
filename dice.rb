@@ -1,6 +1,13 @@
 require "sinatra"
 require "sinatra/reloader"
 
+require "better_errors"
+require "binding_of_caller"
+# Need this configuration for better_errors
+use(BetterErrors::Middleware)
+BetterErrors.application_root = __dir__
+BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
+
 get '/' do
   "<h1>Dice Roll</h1>
   <a href=/dice/2/6>2d6</a>
