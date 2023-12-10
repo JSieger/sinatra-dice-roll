@@ -41,9 +41,9 @@ get("/dice/2/10") do
 end
 
 get("/dice/1/20") do
-  first_die = rand(1..20)
+  @first_die = rand(1..20)
 
-  @outcome = "there was only one die and it reads #{first_die}"
+  @outcome = "there was only one die and it reads #{@first_die}"
 
   erb(:one_twenty)
 end
